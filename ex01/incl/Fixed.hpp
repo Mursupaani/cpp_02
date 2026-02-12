@@ -13,6 +13,7 @@
 #pragma once
 #include <iostream>
 #include <ostream>
+#include <cmath>
 
 class Fixed
 {
