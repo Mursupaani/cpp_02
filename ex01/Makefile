@@ -27,7 +27,7 @@ clean:
 	rm -rf $(OBJ_DIR)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) compile_commands.json
 
 re: fclean all
 
