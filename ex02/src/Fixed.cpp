@@ -116,16 +116,16 @@ Fixed Fixed::operator-(const Fixed &other)
 Fixed Fixed::operator*(const Fixed &other)
 {
 	Fixed result;
-	int rawBits = _rawBits * other._rawBits;
-	result.setRawBits(rawBits >> _fractionalBits);
+	long long rawBits = static_cast<long long>(_rawBits) * other._rawBits;
+	result.setRawBits(static_cast<int>(rawBits >> _fractionalBits));
 	return (result);
 }
 
 Fixed Fixed::operator/(const Fixed &other)
 {
 	Fixed division;
-	int rawBits = (_rawBits << _fractionalBits) / other._rawBits;
-	division.setRawBits(rawBits);
+	long long rawBits = (static_cast<long long>(_rawBits) << _fractionalBits);
+	division.setRawBits(static_cast<int>(rawBits / other._rawBits));
 	return (division);
 }
 
