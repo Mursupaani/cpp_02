@@ -22,11 +22,11 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
 	Point v0 {a};
 	Point v1 {b.getX() - a.getX(), b.getY() - a.getY()};
 	Point v2 {c.getX() - a.getX(), c.getY() - a.getY()};
-	Point v {point.getX() - a.getX(), point.getY() - a.getY()};
 	Fixed detV1V2 = cross(v1, v2);
 
 	if (detV1V2 == Fixed(0))
 		return (false);
+	Point v {point.getX() - a.getX(), point.getY() - a.getY()};
 	Fixed detA = cross(v, v2);
 	Fixed detB = cross(v, v1) * Fixed(-1);
 	Fixed zero = Fixed(0);
@@ -34,9 +34,4 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
 		return (detA >= zero && detB >= zero && (detA + detB) < detV1V2);
 	else
 		return (detA <= zero && detB <= zero && (detA + detB) > detV1V2);
-	// Fixed coordA = cross(v, v2) / detV1V2;
-	// Fixed coordB = (cross(v, v1) / detV1V2) * Fixed(-1);
-	// if (coordA > Fixed(0) && coordB > Fixed(0) && coordA + coordB < Fixed(1))
-	// 	return (true);
-	// return (false);
 }

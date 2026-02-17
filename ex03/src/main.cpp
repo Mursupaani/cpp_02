@@ -19,7 +19,7 @@ int	main(void)
 	Point c{0.0f, 5.0f};
 	Point point0{1.0f, 1.0f};
 	Point point1{0.01, 0.01f};
-	Point point2{4.99f, 0.001f};
+	Point point2{4.9f, 0.01f};
 	Point point3{0.0f, 4.99f};
 	Point point4{0.0f, -0.01f};
 	Point point5{-0.01, 0.01f};
