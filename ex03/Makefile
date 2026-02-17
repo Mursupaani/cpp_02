@@ -1,11 +1,11 @@
 NAME		= fixed
 
 INCL_DIR	= ./incl/
-HPP_FILES	= Fixed.hpp
+HPP_FILES	= Fixed.hpp Point.hpp bsp.hpp
 INCLS		= $(addprefix $(INCL_DIR), $(HPP_FILES))
 
 SRC_DIR		= ./src/
-CPP_FILES	= main.cpp Fixed.cpp
+CPP_FILES	= main.cpp Fixed.cpp Point.cpp bsp.cpp
 SRCS		= $(addprefix $(SRC_DIR), $(CPP_FILES))
 
 OBJ_DIR		= ./obj/
