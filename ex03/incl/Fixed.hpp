@@ -38,6 +38,8 @@ class Fixed
 		Fixed operator/(const Fixed &other);
 		Fixed operator++(int);
 		Fixed &operator++();
+		Fixed operator--(int);
+		Fixed &operator--();
 		static const Fixed &min(const Fixed &a, const Fixed &b);
 		static Fixed &min(Fixed &a, Fixed &b);
 		static const Fixed &max(const Fixed &a, const Fixed &b);
