@@ -142,6 +142,19 @@ Fixed &Fixed::operator++()
 	return (*this);
 }
 
+Fixed Fixed::operator--(int)
+{
+	Fixed	temp = *this;
+	_rawBits--;
+	return (temp);
+}
+
+Fixed &Fixed::operator--()
+{
+	_rawBits--;
+	return (*this);
+}
+
 Fixed &Fixed::min(Fixed &a, Fixed &b)
 {
 	if (a < b)
