@@ -40,28 +40,41 @@ int	main(void)
 		Fixed a;
 		Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 		Fixed c = 10;
-		std::cout << "a: " << a << std::endl;
-		std::cout << "++a: " << ++a << std::endl;
-		std::cout << "a: " << a << std::endl;
-		std::cout << "a++: " << a++ << std::endl;
-		std::cout << "a: " << a << std::endl;
-		std::cout << "--a: " << --a << std::endl;
-		std::cout << "a: " << a << std::endl;
-		std::cout << "a--: " << a-- << std::endl;
-		std::cout << "a: " << a << std::endl;
-		std::cout << "b: " << b << std::endl;
-		std::cout << "c: " << c << std::endl;
-		std::cout << "max(a, b): " << Fixed::max(a, b) << std::endl;
-		std::cout << "min(a, b): " << Fixed::min(a, b) << std::endl;
-		std::cout << "min(a, c): " << Fixed::min(a, c) << std::endl;
-		std::cout << "min(a, c)++: " << Fixed::min(a, c)++ << std::endl;
-		std::cout << "min(a, c): " << Fixed::min(a, c) << std::endl;
-		std::cout << "++min(a, c): " << ++Fixed::min(a, c) << std::endl;
-		std::cout << "min(a, c): " << Fixed::min(a, c) << std::endl;
-		std::cout << "max(a, c)--: " << Fixed::max(a, c)-- << std::endl;
-		std::cout << "max(a, c): " << Fixed::max(a, c) << std::endl;
-		std::cout << "--max(a, c): " << --Fixed::max(a, c) << std::endl;
-		std::cout << "max(a, c): " << Fixed::max(a, c) << std::endl;
+		std::cout << "a :\t" << a << std::endl;
+		std::cout << "++a :\t" << ++a << std::endl;
+		std::cout << "a :\t" << a << std::endl;
+		std::cout << "a++ :\t" << a++ << std::endl;
+		std::cout << "a :\t" << a << std::endl;
+		std::cout << "--a :\t" << --a << std::endl;
+		std::cout << "a :\t" << a << std::endl;
+		std::cout << "a-- :\t" << a-- << std::endl;
+		std::cout << "a :\t" << a << std::endl;
+		std::cout << "b :\t" << b << std::endl;
+		std::cout << "c :\t" << c << std::endl;
+		std::cout << "max(a, b) :   " << Fixed::max(a, b) << std::endl;
+		std::cout << "min(a, b) :   " << Fixed::min(a, b) << std::endl;
+		std::cout << "min(a, c) :   " << Fixed::min(a, c) << std::endl;
+		std::cout << "min(a, c)++ : " << Fixed::min(a, c)++ << std::endl;
+		std::cout << "min(a, c) :   " << Fixed::min(a, c) << std::endl;
+		std::cout << "++min(a, c) : " << ++Fixed::min(a, c) << std::endl;
+		std::cout << "min(a, c) :   " << Fixed::min(a, c) << std::endl;
+		std::cout << "max(a, c)-- : " << Fixed::max(a, c)-- << std::endl;
+		std::cout << "max(a, c) :   " << Fixed::max(a, c) << std::endl;
+		std::cout << "--max(a, c) : " << --Fixed::max(a, c) << std::endl;
+		std::cout << "max(a, c) :   " << Fixed::max(a, c) << std::endl;
 	}
+	// Const max and min test
+	// {
+	// 	Fixed const a;
+	// 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	// 	std::cout << "max(a, b) :   " << ++Fixed::max(a, b) << std::endl;
+	// 	std::cout << "max(a, b) :   " << Fixed::max(a, b)++ << std::endl;
+	// 	std::cout << "max(a, b) :   " << ++Fixed::min(a, b) << std::endl;
+	// 	std::cout << "max(a, b) :   " << Fixed::min(a, b)++ << std::endl;
+	// 	std::cout << "max(a, b) :   " << --Fixed::max(a, b) << std::endl;
+	// 	std::cout << "max(a, b) :   " << Fixed::max(a, b)-- << std::endl;
+	// 	std::cout << "max(a, b) :   " << --Fixed::min(a, b) << std::endl;
+	// 	std::cout << "max(a, b) :   " << Fixed::min(a, b)-- << std::endl;
+	// }
 	return (EXIT_SUCCESS);
 }

@@ -69,32 +69,32 @@ Fixed &Fixed::operator=(const Fixed &other)
 
 bool Fixed::operator>(const Fixed &other) const
 {
-	return (this->_rawBits > other._rawBits);
+	return (_rawBits > other._rawBits);
 }
 
 bool Fixed::operator<(const Fixed &other) const
 {
-	return (this->_rawBits < other._rawBits);
+	return (_rawBits < other._rawBits);
 }
 
 bool Fixed::operator>=(const Fixed &other) const
 {
-	return (this->_rawBits >= other._rawBits);
+	return (_rawBits >= other._rawBits);
 }
 
 bool Fixed::operator<=(const Fixed &other) const
 {
-	return (this->_rawBits <= other._rawBits);
+	return (_rawBits <= other._rawBits);
 }
 
 bool Fixed::operator==(const Fixed &other) const
 {
-	return (this->_rawBits == other._rawBits);
+	return (_rawBits == other._rawBits);
 }
 
 bool Fixed::operator!=(const Fixed &other) const
 {
-	return (this->_rawBits != other._rawBits);
+	return (_rawBits != other._rawBits);
 }
 
 Fixed Fixed::operator+(const Fixed &other)
