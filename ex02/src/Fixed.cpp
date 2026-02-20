@@ -97,7 +97,7 @@ bool Fixed::operator!=(const Fixed &other) const
 	return (_rawBits != other._rawBits);
 }
 
-Fixed Fixed::operator+(const Fixed &other)
+Fixed Fixed::operator+(const Fixed &other) const
 {
 	Fixed sum;
 	int rawBits = _rawBits + other._rawBits;
@@ -105,7 +105,7 @@ Fixed Fixed::operator+(const Fixed &other)
 	return (sum);
 }
 
-Fixed Fixed::operator-(const Fixed &other)
+Fixed Fixed::operator-(const Fixed &other) const
 {
 	Fixed result;
 	int rawBits = _rawBits - other._rawBits;
@@ -113,7 +113,7 @@ Fixed Fixed::operator-(const Fixed &other)
 	return (result);
 }
 
-Fixed Fixed::operator*(const Fixed &other)
+Fixed Fixed::operator*(const Fixed &other) const
 {
 	Fixed result;
 	long long rawBits = static_cast<long long>(_rawBits) * other._rawBits;
@@ -121,7 +121,7 @@ Fixed Fixed::operator*(const Fixed &other)
 	return (result);
 }
 
-Fixed Fixed::operator/(const Fixed &other)
+Fixed Fixed::operator/(const Fixed &other) const
 {
 	Fixed division;
 	long long rawBits = (static_cast<long long>(_rawBits) << _fractionalBits);
